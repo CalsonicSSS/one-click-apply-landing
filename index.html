@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ninja Craft - Tailor your resume in one click</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#f5f3ff',
+                100: '#ede9fe',
+                200: '#ddd6fe',
+                300: '#c4b5fd',
+                400: '#a78bfa',
+                500: '#8b5cf6',
+                600: '#7c3aed',
+                700: '#6d28d9',
+                800: '#5b21b6',
+                900: '#4c1d95',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/css">
+      .gradient-bg {
+        background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
+      }
+      .feature-gradient {
+        background: linear-gradient(180deg, rgba(124, 58, 237, 0.05) 0%, rgba(124, 58, 237, 0) 100%);
+      }
+      .hero-pattern {
+        background-color: #f5f3ff;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%237c3aed' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-800 antialiased">
+    <!-- Header -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <svg class="h-10 w-10 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+            <span class="ml-2 text-xl font-bold text-gray-900">Ninja Craft</span>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a href="#features" class="text-base font-medium text-gray-600 hover:text-primary-600 transition">Features</a>
+            <a href="#how-it-works" class="text-base font-medium text-gray-600 hover:text-primary-600 transition">How it Works</a>
+            <a href="#pricing" class="text-base font-medium text-gray-600 hover:text-primary-600 transition">Pricing</a>
+            <a href="#faq" class="text-base font-medium text-gray-600 hover:text-primary-600 transition">FAQ</a>
+          </nav>
+          <div>
+            <a
+              href="#download"
+              class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 transition"
+            >
+              Install Extension
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern py-20 md:py-28">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 md:pr-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">Your tailored resume & CV, <span class="text-primary-600">just one click away</span></h1>
+            <p class="mt-4 text-xl text-gray-600 max-w-lg">
+              Ninja Craft helps you customize your resume and generate perfect cover letters for any job posting you're viewing - instantly.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a
+                href="#download"
+                class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 transition"
+              >
+                Get Started Free
+              </a>
+              <a
+                href="#how-it-works"
+                class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 transition"
+              >
+                See How It Works
+              </a>
+            </div>
+            <div class="mt-6 flex items-center">
+              <div class="flex -space-x-2">
+                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/women/21.jpg" alt="" />
+                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/men/45.jpg" alt="" />
+                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/women/32.jpg" alt="" />
+              </div>
+              <p class="ml-4 text-sm text-gray-600">Trusted by thousands of job seekers</p>
+            </div>
+          </div>
+          <div class="md:w-1/2 mt-12 md:mt-0">
+            <div class="relative mx-auto w-full max-w-md rounded-2xl shadow-xl overflow-hidden">
+              <div class="bg-white p-1 rounded-2xl overflow-hidden">
+                <img src="images/extension_full.png" alt="Ninja Craft Interface" class="rounded-xl shadow-sm w-full h-auto" />
+                <div class="absolute top-2 right-2 bg-primary-50 rounded-md px-2 py-1 text-xs text-primary-700">Chrome Extension</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900">Everything you need to land your dream job</h2>
+          <p class="mt-4 text-xl text-gray-600">Ninja Craft streamlines your job application process with powerful AI-driven tools.</p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="relative p-6 bg-white rounded-xl feature-gradient border border-primary-100 transition duration-300 hover:shadow-md">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary-100 rounded-lg text-primary-600 mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Job Posting Analysis</h3>
+            <p class="mt-2 text-gray-600">Automatically extracts key skills and requirements from any job posting you're viewing.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="relative p-6 bg-white rounded-xl feature-gradient border border-primary-100 transition duration-300 hover:shadow-md">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary-100 rounded-lg text-primary-600 mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Resume Tailoring</h3>
+            <p class="mt-2 text-gray-600">Get intelligent suggestions to customize your resume for each specific job application.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="relative p-6 bg-white rounded-xl feature-gradient border border-primary-100 transition duration-300 hover:shadow-md">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary-100 rounded-lg text-primary-600 mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Cover Letter Generation</h3>
+            <p class="mt-2 text-gray-600">Creates personalized cover letters based on your resume and the job description.</p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="relative p-6 bg-white rounded-xl feature-gradient border border-primary-100 transition duration-300 hover:shadow-md">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary-100 rounded-lg text-primary-600 mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Application Question Answers</h3>
+            <p class="mt-2 text-gray-600">Generate responses for common application questions, tailored to your experience.</p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="relative p-6 bg-white rounded-xl feature-gradient border border-primary-100 transition duration-300 hover:shadow-md">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary-100 rounded-lg text-primary-600 mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Document Management</h3>
+            <p class="mt-2 text-gray-600">Upload and manage your resume and supporting documents all in one place.</p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="relative p-6 bg-white rounded-xl feature-gradient border border-primary-100 transition duration-300 hover:shadow-md">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary-100 rounded-lg text-primary-600 mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Side Panel Integration</h3>
+            <p class="mt-2 text-gray-600">Work on your application without leaving the job posting page, right from the Chrome side panel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900">How Ninja Craft Works</h2>
+          <p class="mt-4 text-xl text-gray-600">Get job-ready documents in three simple steps</p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="relative">
+            <div class="absolute -left-3 top-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-lg">1</div>
+            <div class="pl-12">
+              <h3 class="text-xl font-bold text-gray-900">Upload Your Resume</h3>
+              <p class="mt-2 text-gray-600">Start by uploading your existing resume and any supporting documents to the extension.</p>
+            </div>
+            <img src="images/upload_files.png" alt="Upload Resume" class="mt-4 rounded-xl shadow-md w-full" />
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative">
+            <div class="absolute -left-3 top-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-lg">2</div>
+            <div class="pl-12">
+              <h3 class="text-xl font-bold text-gray-900">Visit Any Job Postings (With Ninja Craft)</h3>
+              <p class="mt-2 text-gray-600">Browse job sites as usual. When you find a posting, click the Ninja Craft icon to open the side panel.</p>
+            </div>
+            <img src="images/browse_jobs.png" alt="Browse Jobs" class="mt-4 rounded-xl shadow-md w-full" />
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative">
+            <div class="absolute -left-3 top-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-lg">3</div>
+            <div class="pl-12">
+              <h3 class="text-xl font-bold text-gray-900">Generate Tailored Content</h3>
+              <p class="mt-2 text-gray-600">Click 'Generate Suggestions' to instantly create tailored resume points, cover letters, and more.</p>
+            </div>
+            <img src="images/results.png" alt="Get Results" class="mt-4 rounded-xl shadow-md w-full" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900">Simple, Transparent Pricing</h2>
+          <p class="mt-4 text-xl text-gray-600">Get started free, upgrade only when you need more</p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Free Plan -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 transition duration-300 hover:shadow-lg hover:border-primary-200">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900">Free Starter</h3>
+              <div class="mt-4 flex items-baseline">
+                <span class="text-4xl font-extrabold text-gray-900">Free</span>
+              </div>
+              <p class="mt-4 text-gray-600">Perfect for trying out the extension or occasional job applications.</p>
+
+              <ul class="mt-6 space-y-4">
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">10 free credits</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">Resume suggestions</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">Cover letter generation</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">Basic application Q&A</span>
+                </li>
+              </ul>
+
+              <a
+                href="#download"
+                class="mt-8 block w-full bg-white text-primary-600 border border-primary-600 font-medium rounded-md py-2 text-center hover:bg-primary-50 transition"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+
+          <!-- Standard Plan -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-primary-500 relative">
+            <div class="absolute top-0 inset-x-0 transform translate-y-px">
+              <div class="flex justify-center transform -translate-y-1/2">
+                <span class="inline-flex rounded-full bg-primary-600 px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white"> Most Popular </span>
+              </div>
+            </div>
+            <div class="p-6 pt-10">
+              <h3 class="text-xl font-bold text-gray-900">Standard</h3>
+              <div class="mt-4 flex items-baseline">
+                <span class="text-4xl font-extrabold text-gray-900">$3.99</span>
+                <span class="ml-1 text-xl font-semibold text-gray-500">/one-time</span>
+              </div>
+              <p class="mt-4 text-gray-600">Ideal for active job seekers applying to multiple positions.</p>
+
+              <ul class="mt-6 space-y-4">
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">25 credits</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">Enhanced resume suggestions</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">Premium cover letter templates</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">Advanced application Q&A</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">PDF and Word exports</span>
+                </li>
+              </ul>
+
+              <a href="#download" class="mt-8 block w-full bg-primary-600 text-white font-medium rounded-md py-2 text-center hover:bg-primary-700 transition"> Choose Standard </a>
+            </div>
+          </div>
+
+          <!-- Pro Plan -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 transition duration-300 hover:shadow-lg hover:border-primary-200">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900">Pro Package</h3>
+              <div class="mt-4 flex items-baseline">
+                <span class="text-4xl font-extrabold text-gray-900">$7.99</span>
+                <span class="ml-1 text-xl font-semibold text-gray-500">/one-time</span>
+              </div>
+              <p class="mt-4 text-gray-600">For serious job hunters needing comprehensive support.</p>
+
+              <ul class="mt-6 space-y-4">
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">65 credits</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">Priority response generation</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">All premium templates</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">Up to 4 supporting documents</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="flex-shrink-0 h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="ml-2 text-gray-600">Best value for credits</span>
+                </li>
+              </ul>
+
+              <a
+                href="#download"
+                class="mt-8 block w-full bg-white text-primary-600 border border-primary-600 font-medium rounded-md py-2 text-center hover:bg-primary-50 transition"
+              >
+                Choose Pro
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 gradient-bg">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-3xl font-bold text-white">What Users Are Saying</h2>
+          <p class="mt-4 text-xl text-primary-100">Join thousands of satisfied job seekers</p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center mb-4">
+              <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/48.jpg" alt="User" />
+              <div class="ml-4">
+                <h4 class="text-lg font-bold text-gray-900">Sarah J.</h4>
+                <p class="text-sm text-gray-600">Marketing Specialist</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Ninja Craft helped me tailor my resume for every application, highlighting the right skills each time. Landed interviews at 3 of my top choice companies!"
+            </p>
+            <div class="mt-4 flex">
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center mb-4">
+              <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" />
+              <div class="ml-4">
+                <h4 class="text-lg font-bold text-gray-900">Michael T.</h4>
+                <p class="text-sm text-gray-600">Software Engineer</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "The cover letter generator is phenomenal. It created a letter that actually sounded like me, but better! Saved me hours of time for each application."
+            </p>
+            <div class="mt-4 flex">
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <div class="flex items-center mb-4">
+              <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/65.jpg" alt="User" />
+              <div class="ml-4">
+                <h4 class="text-lg font-bold text-gray-900">Emily L.</h4>
+                <p class="text-sm text-gray-600">Project Manager</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "The application question feature is a lifesaver! It helped me craft perfect answers for those tricky screening questions. Got the job on my first try!"
+            </p>
+            <div class="mt-4 flex">
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
+          <p class="mt-4 text-xl text-gray-600">Everything you need to know about Ninja Craft</p>
+        </div>
+
+        <div class="mt-12 max-w-3xl mx-auto">
+          <div class="space-y-6">
+            <!-- Question 1 -->
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold text-gray-900">How does Ninja Craft work?</h3>
+              <p class="mt-2 text-gray-600">
+                Ninja Craft analyzes job postings and your resume, then uses AI to generate tailored suggestions for resume improvements, cover letters, and answers to application
+                questions - all within a convenient browser extension.
+              </p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold text-gray-900">What makes Ninja Craft different from other resume tools?</h3>
+              <p class="mt-2 text-gray-600">
+                Unlike most resume tools, Ninja Craft integrates directly with your browser so you can tailor your application while viewing the job posting. It's context-aware and
+                provides job-specific suggestions, not generic advice.
+              </p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold text-gray-900">How many job applications can I use Ninja Craft for?</h3>
+              <p class="mt-2 text-gray-600">
+                Ninja Craft uses a credit system. You get 10 free credits when you install. Each job application uses 1 credit (covering resume suggestions, cover letter, and
+                multiple application questions). Additional credits can be purchased at any time.
+              </p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold text-gray-900">Is my data secure when using Ninja Craft?</h3>
+              <p class="mt-2 text-gray-600">
+                Yes. Your resume and documents are stored locally in your browser's storage. We don't permanently store your resume or personal information on our servers. All data
+                processing is encrypted and secure.
+              </p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold text-gray-900">What file formats does Ninja Craft support?</h3>
+              <p class="mt-2 text-gray-600">
+                Ninja Craft supports PDF, DOCX, and TXT resume files. You can download your generated cover letters in both DOCX and PDF formats for easy submission.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download/CTA -->
+    <section id="download" class="py-20 gradient-bg">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-white">Ready to supercharge your job search?</h2>
+          <p class="mt-4 text-xl text-primary-100">Install Ninja Craft now and start landing more interviews with perfectly tailored applications.</p>
+          <div class="mt-8">
+            <a
+              href="https://chrome.google.com/webstore/detail/ninja-craft/coming-soon"
+              target="_blank"
+              class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-primary-700 bg-white hover:bg-gray-100 md:text-lg transition shadow-md"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Add to Chrome — It's Free!
+            </a>
+          </div>
+          <p class="mt-4 text-primary-200 text-sm">Works with Chrome, Brave, Edge, and other Chromium-based browsers</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-8 md:mb-0">
+            <div class="flex items-center">
+              <svg class="h-8 w-8 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              <span class="ml-2 text-xl font-bold">Ninja Craft</span>
+            </div>
+            <p class="mt-2 text-gray-400 max-w-xs">Your tailored resume & CV, just one click away—on any job site you visit!</p>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Product</h3>
+              <ul class="mt-4 space-y-2">
+                <li><a href="#features" class="text-gray-300 hover:text-white transition">Features</a></li>
+                <li><a href="#how-it-works" class="text-gray-300 hover:text-white transition">How it Works</a></li>
+                <li><a href="#pricing" class="text-gray-300 hover:text-white transition">Pricing</a></li>
+                <li><a href="#faq" class="text-gray-300 hover:text-white transition">FAQ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Support</h3>
+              <ul class="mt-4 space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition">Help Center</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition">Contact Us</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition">Privacy Policy</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition">Terms of Service</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Connect</h3>
+              <ul class="mt-4 space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white transition">Twitter</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition">LinkedIn</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition">Facebook</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-gray-800 pt-8">
+          <p class="text-gray-400 text-sm text-center">&copy; 2025 Ninja Craft. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
